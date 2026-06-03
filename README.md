@@ -1,6 +1,6 @@
 # aws-security-toolkit
 
-> A practical **AWS security toolkit**: battle-tested **IAM policy examples**, **EMR / Hadoop / Kafka security templates**, and reference snippets distilled from **13 years of securing data platforms at enterprise (MNC) scale** — now focused on AWS.
+> A practical **AWS security toolkit**: battle-tested **IAM policy examples**, **EMR / Hadoop / Kafka security templates**, and reference snippets distilled from **15+ years of securing data platforms at enterprise (MNC) scale** — now focused on AWS.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
