@@ -1,6 +1,6 @@
 # aws-security-toolkit
 
-> A practical **AWS security toolkit**: battle-tested **IAM policy examples**, **EMR / Hadoop / Kafka security templates**, and reference snippets distilled from **13 years of securing data platforms at enterprise (Telstra) scale** — now focused on AWS.
+> A practical **AWS security toolkit**: battle-tested **IAM policy examples**, **EMR / Hadoop / Kafka security templates**, and reference snippets distilled from **13 years of securing data platforms at enterprise (MNC) scale** — now focused on AWS.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -45,5 +45,5 @@ It's also the **bridge** between the data-platform past and the AWS Security pre
 ## Related
 
 - 📖 Blog: [IAM Policy Evaluation Logic — the diagram AWS should have made](https://aiopsone.com/blog/iam-policy-evaluation) *(link goes live with the post)*
-- 📖 Blog: [Securing Hadoop/EMR on AWS — lessons from Telstra-scale](https://aiopsone.com/blog/securing-emr-aws)
+- 📖 Blog: [Securing Hadoop/EMR on AWS — lessons from MNC-scale](https://aiopsone.com/blog/securing-emr-aws)
 - 🌐 More at **[aiopsone.com](https://aiopsone.com)** — AI-powered AWS Security & Cloud Operations for APRA-regulated Australia.
