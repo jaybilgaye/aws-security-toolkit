@@ -1,0 +1,34 @@
+{
+  "Version": "2012-10-17",
+  "Id": "data-lake-cmk-policy",
+  "Statement": [
+    {
+      "Sid": "EnableRootAccountIamPermissions",
+      "Effect": "Allow",
+      "Principal": { "AWS": "arn:aws:iam::111122223333:root" },
+      "Action": "kms:*",
+      "Resource": "*"
+    },
+    {
+      "Sid": "KeyAdministrators",
+      "Effect": "Allow",
+      "Principal": { "AWS": "arn:aws:iam::111122223333:role/kms-admins" },
+      "Action": [
+        "kms:Create*", "kms:Describe*", "kms:Enable*", "kms:List*",
+        "kms:Put*", "kms:Update*", "kms:Revoke*", "kms:Disable*",
+        "kms:Get*", "kms:Delete*", "kms:ScheduleKeyDeletion", "kms:CancelKeyDeletion"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "DataPlatformKeyUsageViaS3Only",
+      "Effect": "Allow",
+      "Principal": { "AWS": "arn:aws:iam::111122223333:role/data-platform-job" },
+      "Action": [ "kms:Decrypt", "kms:GenerateDataKey" ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": { "kms:ViaService": "s3.ap-southeast-2.amazonaws.com" }
+      }
+    }
+  ]
+}

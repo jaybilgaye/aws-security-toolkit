@@ -1,0 +1,37 @@
+{
+  "EncryptionConfiguration": {
+    "EnableInTransitEncryption": true,
+    "EnableAtRestEncryption": true,
+    "InTransitEncryptionConfiguration": {
+      "TLSCertificateConfiguration": {
+        "CertificateProviderType": "PEM",
+        "S3Object": "s3://my-emr-config/certs/emr-tls-certs.zip"
+      }
+    },
+    "AtRestEncryptionConfiguration": {
+      "S3EncryptionConfiguration": {
+        "EncryptionMode": "SSE-KMS",
+        "AwsKmsKey": "arn:aws:kms:ap-southeast-2:111122223333:key/REPLACE-WITH-KEY-ID"
+      },
+      "LocalDiskEncryptionConfiguration": {
+        "EncryptionKeyProviderType": "AwsKms",
+        "AwsKmsKey": "arn:aws:kms:ap-southeast-2:111122223333:key/REPLACE-WITH-KEY-ID",
+        "EnableEbsEncryption": true
+      }
+    }
+  },
+  "AuthenticationConfiguration": {
+    "KerberosConfiguration": {
+      "Provider": "ClusterDedicatedKdc",
+      "ClusterDedicatedKdcConfiguration": {
+        "TicketLifetimeInHours": 24,
+        "CrossRealmTrustConfiguration": {
+          "Realm": "AD.EXAMPLE.COM",
+          "Domain": "ad.example.com",
+          "AdminServer": "ad.example.com",
+          "KdcServer": "ad.example.com"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DataLakeScopedReadWrite",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::my-data-lake",
+        "arn:aws:s3:::my-data-lake/curated/*",
+        "arn:aws:s3:::my-data-lake/staging/*"
+      ]
+    },
+    {
+      "Sid": "KmsForDataLakeViaS3Only",
+      "Effect": "Allow",
+      "Action": [
+        "kms:Decrypt",
+        "kms:GenerateDataKey"
+      ],
+      "Resource": "arn:aws:kms:ap-southeast-2:111122223333:key/REPLACE-WITH-KEY-ID",
+      "Condition": {
+        "StringEquals": {
+          "kms:ViaService": "s3.ap-southeast-2.amazonaws.com"
+        }
+      }
+    },
+    {
+      "Sid": "GlueCatalogReadOnly",
+      "Effect": "Allow",
+      "Action": [
+        "glue:GetTable",
+        "glue:GetTables",
+        "glue:GetDatabase",
+        "glue:GetPartitions"
+      ],
+      "Resource": [
+        "arn:aws:glue:ap-southeast-2:111122223333:catalog",
+        "arn:aws:glue:ap-southeast-2:111122223333:database/analytics",
+        "arn:aws:glue:ap-southeast-2:111122223333:table/analytics/*"
+      ]
+    },
+    {
+      "Sid": "DenyUnencryptedS3Writes",
+      "Effect": "Deny",
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::my-data-lake/*",
+      "Condition": {
+        "StringNotEquals": {
+          "s3:x-amz-server-side-encryption": "aws:kms"
+        }
+      }
+    }
+  ]
+}

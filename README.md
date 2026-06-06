@@ -24,7 +24,6 @@ It's also the **bridge** between the data-platform past and the AWS Security pre
 | `emr-hadoop/` | EMR / Hadoop / Kafka security templates (encryption, auth, network isolation) |
 | `encryption/` | KMS patterns, S3 + EBS encryption baselines |
 | `detective/` | GuardDuty, Security Hub, Config quick-start snippets |
-| `docs/` | Notes + diagrams |
 
 ---
 
@@ -38,7 +37,10 @@ It's also the **bridge** between the data-platform past and the AWS Security pre
 
 ## Status
 
-🟢 **Rolling repo** — populated continuously as posts and patterns ship. Scaffold + README first (Day 0).
+🟢 **Rolling repo — v1 content shipped.** Live: least-privilege data-platform IAM policy
+(`iam/`), EMR security configuration + hardening guide (`emr-hadoop/`), CMK key policy +
+key-management checklist (`encryption/`), detective-controls quick start (`detective/`).
+More patterns added continuously. All examples use placeholder account IDs — replace before use.
 
 ---
 
