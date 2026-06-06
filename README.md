@@ -44,6 +44,6 @@ It's also the **bridge** between the data-platform past and the AWS Security pre
 
 ## Related
 
-- 📖 Blog: [IAM Policy Evaluation Logic — the diagram AWS should have made](https://aiopsone.com/blog/iam-policy-evaluation) *(link goes live with the post)*
-- 📖 Blog: [Securing Hadoop/EMR on AWS — lessons from MNC-scale](https://aiopsone.com/blog/securing-emr-aws)
+- 📖 Blog: IAM Policy Evaluation Logic — the diagram AWS should have made *(post coming soon)*
+- 📖 Blog: Securing Hadoop/EMR on AWS — lessons from MNC-scale *(post coming soon)*
 - 🌐 More at **[aiopsone.com](https://aiopsone.com)** — AI-powered AWS Security & Cloud Operations for APRA-regulated Australia.
