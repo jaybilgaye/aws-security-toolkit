@@ -46,6 +46,6 @@ More patterns added continuously. All examples use placeholder account IDs — r
 
 ## Related
 
-- 📖 Blog: IAM Policy Evaluation Logic — the diagram AWS should have made *(post coming soon)*
-- 📖 Blog: Securing Hadoop/EMR on AWS — lessons from MNC-scale *(post coming soon)*
+- 📖 Blog: [IAM Policy Evaluation Logic — the diagram AWS should have made](https://aiopsone.com/blog/iam-policy-evaluation-logic)
+- 📖 Blog: [Securing Hadoop/EMR on AWS — lessons from MNC scale](https://aiopsone.com/blog/securing-emr-hadoop-aws)
 - 🌐 More at **[aiopsone.com](https://aiopsone.com)** — AI-powered AWS Security & Cloud Operations for APRA-regulated Australia.
