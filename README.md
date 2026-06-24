@@ -12,7 +12,7 @@
 
 Securing AWS well is mostly a pattern problem — the same IAM, encryption, and data-platform controls recur across every regulated environment, yet teams rebuild them from scratch each time. This is the umbrella repo for those reusable patterns: the things I reach for repeatedly, hardened by real enterprise-scale operation rather than copied from a docs page.
 
-It's also the **bridge** between the data-platform past and the AWS Security present — proof that the "old" Hadoop/Kafka/EMR background is a *senior* signal: I've secured data at a scale APRA actually cares about.
+
 
 ---
 
